@@ -1,0 +1,19 @@
+code_review_task:
+  description: >
+    Analyze the provided code snippet meticulously.
+    Identify potential bugs, security vulnerabilities, and areas for improvement.
+    For each identified issue, explain why it is a problem and suggest a concrete fix with code examples if possible.
+    Provide a detailed, step-by-step explanation of how the code works, including its control flow and data structures.
+    Summarize the overall purpose and what the code is trying to accomplish.
+    The code to be analyzed will be provided in the '{code_input}' placeholder.
+  expected_output: >
+    A comprehensive report in Markdown format containing the following sections:
+    1. **Overall Purpose**: A brief summary of what the code aims to achieve.
+    2. **How it Works**: A detailed walkthrough of the code's logic and execution flow.
+    3. **Potential Bugs and Vulnerabilities**:
+        - For each issue: Description, Impact, Suggested Fix (with code if applicable).
+    4. **Suggestions for Improvement**: (Optional) Any other suggestions for making the code cleaner, more efficient, or more robust.
+  agent: code_analyzer
+  # This task will be assigned to the 'code_analyzer' agent defined in agents.yaml
+  # The CrewAI framework will automatically assign it if the agent is available and suitable,
+  # or you can explicitly assign it in your crew definition in crew.py if needed.
